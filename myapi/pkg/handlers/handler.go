@@ -8,7 +8,7 @@ import (
 
 const InvalidMethod = "Invalid request method."
 
-func homeHandler(w http.ResponseWriter, req *http.Request) {
+func HomeHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Method != http.MethodGet {
 		http.Error(w, InvalidMethod, http.StatusMethodNotAllowed)
 		return
@@ -16,7 +16,7 @@ func homeHandler(w http.ResponseWriter, req *http.Request) {
 	io.WriteString(w, "Hello Home Page\n")
 }
 
-func postArticleHandler(w http.ResponseWriter, req *http.Request) {
+func PostArticleHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Method != http.MethodPost {
 		http.Error(w, InvalidMethod, http.StatusMethodNotAllowed)
 		return
@@ -24,7 +24,7 @@ func postArticleHandler(w http.ResponseWriter, req *http.Request) {
 	io.WriteString(w, "Post article...\n")
 }
 
-func articleListHandler(w http.ResponseWriter, req *http.Request) {
+func ArticleListHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Method != http.MethodGet {
 		http.Error(w, InvalidMethod, http.StatusMethodNotAllowed)
 		return
@@ -32,7 +32,7 @@ func articleListHandler(w http.ResponseWriter, req *http.Request) {
 	io.WriteString(w, "Article list\n")
 }
 
-func articleDetailHandler(w http.ResponseWriter, req *http.Request) {
+func ArticleDetailHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Method != http.MethodGet {
 		http.Error(w, InvalidMethod, http.StatusMethodNotAllowed)
 		return
@@ -42,7 +42,7 @@ func articleDetailHandler(w http.ResponseWriter, req *http.Request) {
 	io.WriteString(w, resString)
 }
 
-func postNiceHandler(w http.ResponseWriter, req *http.Request) {
+func PostNiceHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Method != http.MethodPost {
 		http.Error(w, InvalidMethod, http.StatusMethodNotAllowed)
 		return
@@ -50,7 +50,7 @@ func postNiceHandler(w http.ResponseWriter, req *http.Request) {
 	io.WriteString(w, "Post nice...\n")
 }
 
-func postCommentHandler(w http.ResponseWriter, req *http.Request) {
+func PostCommentHandler(w http.ResponseWriter, req *http.Request) {
 	if req.Method != http.MethodPost {
 		http.Error(w, InvalidMethod, http.StatusMethodNotAllowed)
 		return

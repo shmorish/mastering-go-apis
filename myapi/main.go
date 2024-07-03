@@ -1,7 +1,7 @@
 package main
 
 import (
-	"handlers"
+	"blog/pkg/handlers"
 	"log"
 	"net/http"
 )
